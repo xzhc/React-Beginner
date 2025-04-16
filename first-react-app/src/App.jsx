@@ -1,6 +1,6 @@
 import { MyNameFunc } from "./MyNameFunc";
 import { TodoList } from "./TodoList";
-
+import { User } from "./User";
 function App() {
   return (
     <div>
@@ -10,7 +10,8 @@ function App() {
       {/* <MyNameFunc name="xzh4" isProgrammer /> */}
       {/* <MyNameFunc>itsxzh</MyNameFunc> */}
 
-      <TodoList />
+      {/* <TodoList /> */}
+      <User name="xzh" age={25} />
     </div>
   );
 }
