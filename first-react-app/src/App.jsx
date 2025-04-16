@@ -1,5 +1,6 @@
-import { useState } from "react";
-import { Counter } from "./Counter";
+// import { useState } from "react";
+import { AppClass } from "./AppClass";
+import { CounterClass } from "./CounterClass";
 // function slowGetter() {
 //   console.log("State getter");
 //   return "xzh";
@@ -8,20 +9,24 @@ import { Counter } from "./Counter";
 function App() {
   // const [name, setName] = useState("xzh");
   // const [age, setAge] = useState(25);
-  const [person, setPerson] = useState({ name: "xzh", age: 25 });
-  function handleClick() {
-    // console.log("Age:", age);
-    //setName("xsy");
-    //setAge((currentAge) => currentAge + 1);
-    //console.log("Age:", age);
-    //setAge((currentAge) => currentAge + 1);
-    setPerson({ ...person, name: "xsy" });
-  }
+  // const [person, setPerson] = useState({ name: "xzh", age: 25 });
+  // function handleClick() {
+  //   // console.log("Age:", age);
+  //   //setName("xsy");
+  //   //setAge((currentAge) => currentAge + 1);
+  //   //console.log("Age:", age);
+  //   //setAge((currentAge) => currentAge + 1);
+  //   setPerson({ ...person, name: "xsy" });
+  // }
   return (
-    <h1 onClick={handleClick}>
-      {person.name} {person.age}
-    </h1>
+    // <h1 onClick={handleClick}>
+    //   {person.name} {person.age}
+    // </h1>
     // <Counter />
+    <>
+      <AppClass />
+      <CounterClass />
+    </>
   );
 }
 
