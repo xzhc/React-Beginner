@@ -1,16 +1,21 @@
+// import { TodoList } from "./TodoList";
+import { TodoListClass } from "./TodoListClass";
+import { MyName } from "./MyName";
+import { MyNameClass } from "./MyNameClass";
+
 function App() {
-  const myCustomLabel = <label htmlFor="inputId">sdsdd</label>;
   return (
-    <div className="large" id="largeDiv">
-      {myCustomLabel}
-      <input id="inputId" type="number" defaultValuevalue={3} />
+    <div>
+      <h1>Todo List</h1>
+      {/* <TodoList /> */}
+      <TodoListClass />
+      {/* <MyName /> */}
+      <MyNameClass />
     </div>
   );
 }
 
 export default App;
 
-// div with the class large and the id largeDiv with text Hi.
-// Remove the text Hi
-// Add a label with the for prop set to inputId and any text
-// Add an input with the id inputId, type number, and value of 3 as a number
+// Create a component that renders and H1 with your name in it.
+// Create a component that renders a TodoListClass.
