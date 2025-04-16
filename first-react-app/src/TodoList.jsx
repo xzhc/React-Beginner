@@ -1,10 +1,14 @@
+//import { TodoListItem } from "./TodoListItem";
+import { TodoListItemClass } from "./TodoListItemClass";
 export function TodoList() {
   return (
     <ul>
-      <li>Item1</li>
-      <li>Item2</li>
-      <li>Item3</li>
-      <li>Item4</li>
+      {/* <TodoListItem isComplete={true}>reading</TodoListItem>
+      <TodoListItem isComplete={false}>sleeping</TodoListItem>
+      <TodoListItem isComplete={true}>coding</TodoListItem> */}
+      <TodoListItemClass isComplete={false}>reading</TodoListItemClass>
+      <TodoListItemClass isComplete>sleeping</TodoListItemClass>
+      <TodoListItemClass isComplete={true}>coding</TodoListItemClass>
     </ul>
   );
 }

@@ -1,21 +1,18 @@
-// import { TodoList } from "./TodoList";
-import { TodoListClass } from "./TodoListClass";
-import { MyName } from "./MyName";
-import { MyNameClass } from "./MyNameClass";
+import { MyNameFunc } from "./MyNameFunc";
+import { TodoList } from "./TodoList";
 
 function App() {
   return (
     <div>
-      <h1>Todo List</h1>
-      {/* <TodoList /> */}
-      <TodoListClass />
-      {/* <MyName /> */}
-      <MyNameClass />
+      {/* <MyNameFunc name="xzh" age={25} />
+      <MyNameFunc name="xzh2" age={26} />
+      <MyNameFunc name="xzh3" isProgrammer={true} /> */}
+      {/* <MyNameFunc name="xzh4" isProgrammer /> */}
+      {/* <MyNameFunc>itsxzh</MyNameFunc> */}
+
+      <TodoList />
     </div>
   );
 }
 
 export default App;
-
-// Create a component that renders and H1 with your name in it.
-// Create a component that renders a TodoListClass.
