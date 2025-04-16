@@ -1,23 +1,32 @@
-// import { MyNameFunc } from "./MyNameFunc";
-// import { TodoList } from "./TodoList";
-// import { User } from "./User";
-// import "./styles.css";
-// import user from "./user.json";
-import img from "./code.png";
+import { useState } from "react";
+import { Counter } from "./Counter";
+// function slowGetter() {
+//   console.log("State getter");
+//   return "xzh";
+// }
+
 function App() {
+  // const [name, setName] = useState("xzh");
+  // const [age, setAge] = useState(25);
+  const [person, setPerson] = useState({ name: "xzh", age: 25 });
+  function handleClick() {
+    // console.log("Age:", age);
+    //setName("xsy");
+    //setAge((currentAge) => currentAge + 1);
+    //console.log("Age:", age);
+    //setAge((currentAge) => currentAge + 1);
+    setPerson({ ...person, name: "xsy" });
+  }
   return (
-    <div>
-      {/* <MyNameFunc name="xzh" age={25} />
-      <MyNameFunc name="xzh2" age={26} />
-      <MyNameFunc name="xzh3" isProgrammer={true} /> */}
-      {/* <MyNameFunc name="xzh4" isProgrammer /> */}
-      {/* <MyNameFunc>itsxzh</MyNameFunc> */}
-      {/* <TodoList /> */}
-      {/* <User name="xzh" age={25} /> */}
-      {/* {JSON.stringify(user)} */}
-      <img src={img} />
-    </div>
+    <h1 onClick={handleClick}>
+      {person.name} {person.age}
+    </h1>
+    // <Counter />
   );
 }
 
 export default App;
+
+//Create a new component called counter
+//have a state for a counter that starts at 0 and render that in the jsx
+//When you click the number increment it by 1
