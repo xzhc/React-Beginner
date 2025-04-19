@@ -1,17 +1,7 @@
-import { useState } from "react";
+import { Child } from "./Child";
 
 function App() {
-  const [name, setName] = useState("xzh");
-
-  return (
-    <input
-      type="text"
-      value={name}
-      onChange={(e) => {
-        setName(e.target.value);
-      }}
-    />
-  );
+  return <Child />;
 }
 
 export default App;
