@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import { DisplayString } from "./DisplayString";
 
 export function Child() {
   const [name, setName] = useState("");
   const [age, setAge] = useState(0);
-  const person = { name };
+  // const person = { name };
   //const [width, setWidth] = useState(window.innerWidth);
   // useEffect(() => {
   //   console.log("Age changed", age);
@@ -38,9 +39,13 @@ export function Child() {
   //     console.log("inside cleanup");
   //   };
   // }, [name]);
+  // useEffect(() => {
+  //   console.log(person);
+  // }, [person]);
+
   useEffect(() => {
-    console.log(person);
-  }, [person]);
+    document.title = name;
+  }, [name]);
   return (
     <div>
       <input
@@ -55,7 +60,7 @@ export function Child() {
       <button onClick={() => setAge((currentage) => currentage + 1)}>+</button>
       <br />
       <br />
-      My name is {name}, and I am {age} years old.
+      <DisplayString name={name} age={age} />
       {/* {width} */}
     </div>
   );

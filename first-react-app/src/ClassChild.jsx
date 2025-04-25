@@ -1,4 +1,5 @@
 import React from "react";
+import { DisplayString } from "./DisplayString";
 
 export class ClassChild extends React.Component {
   constructor(props) {
@@ -20,11 +21,12 @@ export class ClassChild extends React.Component {
     console.log("Unmount");
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState.name !== this.state.name) {
-      document.removeEventListener("click", this.handleDocumentClick);
-      document.addEventListener("click", this.handleDocumentClick);
-    }
+  componentDidUpdate() {
+    // if (prevState.name !== this.state.name) {
+    //   document.removeEventListener("click", this.handleDocumentClick);
+    //   document.addEventListener("click", this.handleDocumentClick);
+    // }
+    document.title = this.state.name;
   }
 
   render() {
@@ -60,7 +62,7 @@ export class ClassChild extends React.Component {
         </button>
         <br />
         <br />
-        My name is {this.state.name}, and I am {this.state.age} years old.
+        <DisplayString name={this.state.name} age={this.state.age} />
       </div>
     );
   }
