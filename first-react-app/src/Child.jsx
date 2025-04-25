@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { DisplayString } from "./DisplayString";
 
-export function Child() {
+export function Child({ favoriteNumber }) {
   const [name, setName] = useState("");
   const [age, setAge] = useState(0);
   // const person = { name };
@@ -59,6 +59,9 @@ export function Child() {
       {age}
       <button onClick={() => setAge((currentage) => currentage + 1)}>+</button>
       <br />
+      <br />
+      {favoriteNumber !== undefined &&
+        `My favorite Number is ${favoriteNumber}`}
       <br />
       <DisplayString name={name} age={age} />
       {/* {width} */}

@@ -4,8 +4,7 @@ import { Child } from "./Child";
 function App() {
   return (
     <div>
-      <Child />
-      <ClassChild />
+      <Child favoriteNumber={1} />
     </div>
   );
 }
