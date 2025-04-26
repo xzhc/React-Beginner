@@ -52,7 +52,7 @@ function App() {
       {status === "fetched" && (
         <ul>
           {users.map((user) => {
-            return <User key={user.id} name={user.name} />;
+            return <User key={user.id} {...user} />;
           })}
         </ul>
       )}

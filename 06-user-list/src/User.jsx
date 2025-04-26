@@ -1,3 +1,9 @@
-export function User({ name }) {
-  return <li>{name}</li>;
+export function User({ name, username, email, phone }) {
+  return (
+    <li>
+      {name}
+      {username}
+      {email} {phone}
+    </li>
+  );
 }
