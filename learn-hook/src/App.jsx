@@ -1,7 +1,8 @@
-import { Counter } from "./Counter";
+//import { Counter } from "./Counter";
+import { ToggleTheme } from "./ToggleTheme";
 
 function App() {
-  return <Counter />;
+  return <ToggleTheme />;
 }
 
 export default App;
