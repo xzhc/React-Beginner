@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Child } from "./Child";
-
+import { ThemeContext } from "./ThemeContext";
 export function ToggleTheme() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -14,9 +14,9 @@ export function ToggleTheme() {
   }, [isDarkMode]);
 
   return (
-    <>
-      <Child isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+    <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
+      <Child />
       <p>It's xzh</p>
-    </>
+    </ThemeContext.Provider>
   );
 }
