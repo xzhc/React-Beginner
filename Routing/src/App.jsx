@@ -1,6 +1,7 @@
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { Store } from "./pages/Store";
+import { NavBar } from "./NavBar";
 
 function App() {
   let component = null;
@@ -17,19 +18,7 @@ function App() {
   }
   return (
     <>
-      <nav>
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/about">About</a>
-          </li>
-          <li>
-            <a href="/store">Store</a>
-          </li>
-        </ul>
-      </nav>
+      <NavBar />
       {component}
     </>
   );

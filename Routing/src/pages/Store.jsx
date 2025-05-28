@@ -1,7 +1,10 @@
+import { NavBar } from "../NavBar";
+
 export function Store() {
   return (
-    <div>
-      <div>Store</div>
-    </div>
+    <>
+      <NavBar />
+      <h1>Store</h1>
+    </>
   );
 }
