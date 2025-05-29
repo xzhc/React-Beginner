@@ -13,6 +13,17 @@ export function NavBar() {
         <li>
           <Link to="/store">Store</Link>
         </li>
+        <li>
+          <Link to="/team">Team</Link>
+          <ul>
+            <li>
+              <Link to="/team/joe">Joe</Link>
+            </li>
+            <li>
+              <Link to="/team/sally">Sally</Link>
+            </li>
+          </ul>
+        </li>
       </ul>
     </nav>
   );
