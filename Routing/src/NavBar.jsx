@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import teamMembers from "./teamMembers.json";
 
 export function NavBar() {
   return (
@@ -16,12 +17,11 @@ export function NavBar() {
         <li>
           <Link to="/team">Team</Link>
           <ul>
-            <li>
-              <Link to="/team/joe">Joe</Link>
-            </li>
-            <li>
-              <Link to="/team/sally">Sally</Link>
-            </li>
+            {teamMembers.map((member) => (
+              <li key={member.id}>
+                <Link to={`/team/${member.id}`}>{member.name}</Link>
+              </li>
+            ))}
           </ul>
         </li>
       </ul>

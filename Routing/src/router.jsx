@@ -4,7 +4,7 @@ import { About } from "./pages/About.jsx";
 import { Store } from "./pages/Store.jsx";
 import { NavBar } from "./NavBar.jsx";
 import { Team } from "./pages/Team.jsx";
-import TeamMember from "./pages/TeamMember.jsx";
+import { TeamMember } from "./pages/TeamMember.jsx";
 export const router = createBrowserRouter([
   {
     element: <NavLayout />,
@@ -17,8 +17,7 @@ export const router = createBrowserRouter([
         element: <TeamNavLayout />,
         children: [
           { index: true, element: <Team /> },
-          { path: "joe", element: <TeamMember name="Joe" /> },
-          { path: "sally", element: <TeamMember name="Sally" /> },
+          { path: ":id", element: <TeamMember /> },
         ],
       },
     ],
