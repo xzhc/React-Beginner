@@ -5,12 +5,12 @@ import { PostCard } from "@/components/PostCard";
 import { TodoItem } from "@/components/TodoItem";
 import { useLoaderData } from "react-router-dom";
 
-export function User() {
+function User() {
   const { user, posts, todos } = useLoaderData();
   return (
     <>
-      <h1 class="page-title">{user.name}</h1>
-      <div class="page-subtitle">{user.email}</div>
+      <h1 className="page-title">{user.name}</h1>
+      <div className="page-subtitle">{user.email}</div>
       <div>
         <b>Company:</b> {user.company.name}
       </div>
@@ -21,14 +21,14 @@ export function User() {
         <b>Address:</b> {user.address.street} {user.address.suite}{" "}
         {user.address.city} {user.address.zipcode}
       </div>
-      <h3 class="mt-4 mb-2">Posts</h3>
-      <div class="card-grid">
+      <h3 className="mt-4 mb-2">Posts</h3>
+      <div className="card-grid">
         {posts.map((post) => {
           return <PostCard key={post.id} {...post} />;
         })}
       </div>
 
-      <h3 class="mt-4 mb-2">Todos</h3>
+      <h3 className="mt-4 mb-2">Todos</h3>
       <ul>
         {todos.map((todo) => {
           return <TodoItem key={todo.id} {...todo} />;

@@ -31,35 +31,33 @@ export const router = createBrowserRouter([
               },
             ],
           },
-        ],
-      },
-
-      {
-        path: "users",
-        children: [
           {
-            index: true,
-            ...userListRoute,
+            path: "users",
+            children: [
+              {
+                index: true,
+                ...userListRoute,
+              },
+              {
+                path: ":userId",
+                ...userRoute,
+              },
+            ],
           },
           {
-            path: ":userId",
-            ...userRoute,
+            path: "todos",
+            children: [
+              {
+                index: true,
+                ...todoListRoute,
+              },
+            ],
           },
-        ],
-      },
-
-      {
-        path: "todos",
-        children: [
           {
-            index: true,
-            ...todoListRoute,
+            path: "*",
+            element: <h1>404 - Page Not Found</h1>,
           },
         ],
-      },
-      {
-        path: "*",
-        element: <h1>404 - Page Not Found</h1>,
       },
     ],
   },

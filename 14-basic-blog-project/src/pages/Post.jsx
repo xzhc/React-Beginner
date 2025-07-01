@@ -1,4 +1,3 @@
-import { use } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { getComments } from "@/api/comments";
 import { getPost } from "@/api/posts";
